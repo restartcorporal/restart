@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restart Corporal | Dr. Eduardo Marques (CRM 68489-SP)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0f2b48',
+                            navyLight: '#1e3a8a',
+                            green: '#2da95c',
+                            greenHover: '#238949',
+                            teal: '#0d9488',
+                            accent: '#e2e8f0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f2b48 0%, #2da95c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-green selection:text-white">
+
+    <!-- Configuração do Telefone do WhatsApp -->
+    <!-- Altere o número abaixo para o seu WhatsApp oficial (Ex: 5511999999999) -->
+    <script>
+        const whatsappNumber = "5511999999999";
+        
+        function getWaLink(message) {
+            return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        }
+    </script>
+
+    <!-- HEADER FIXO -->
+    <header class="fixed top-0 left-0 right-0 z-50 custom-glass border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
+                        <!-- SVG Logo Restart Corporal -->
+                        <svg class="w-7 h-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 50 15 A 35 35 0 1 1 20 40" stroke="#2da95c" stroke-width="8" stroke-linecap="round"/>
+                            <polygon points="12,40 28,40 20,25" fill="#2da95c" />
+                            <path d="M 35 60 C 35 45 65 45 65 60 C 65 75 35 75 35 60 Z" fill="#2da95c" opacity="0.8"/>
+                            <path d="M 45 50 C 45 35 75 35 75 50" stroke="#0f2b48" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-brand-navy block leading-none">RESTART</span>
+                        <span class="text-xs font-semibold tracking-widest text-brand-green uppercase">CORPORAL</span>
+                    </div>
+                </a>
+
+                <!-- NAV DESKTOP -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                    <a href="#produtos" class="hover:text-brand-green transition-colors">Produtos & Opções</a>
+                    <a href="#diferenciais" class="hover:text-brand-green transition-colors">Diferenciais</a>
+                    <a href="#sobre" class="hover:text-brand-green transition-colors">Sobre o Médico</a>
+                </nav>
+
+                <!-- BOTÃO CONTATO HEADER -->
+                <a id="header-cta" href="#" target="_blank" onclick="this.href=getWaLink('Olá Dr. Eduardo Marques, gostaria de obter mais informações sobre o Restart Corporal.');" 
+                   class="bg-brand-green hover:bg-brand-greenHover text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                    <i class="fa-brands me-1 fa-whatsapp text-lg"></i>
+                    <span>Falar com Atendimento</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden relative bg-gradient-to-b from-white via-slate-50 to-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-brand-green font-semibold text-xs tracking-wider uppercase mb-6 shadow-sm">
+                    <i class="fa-solid fa-shield-halved"></i> Responsabilidade & Protocolos de Saúde
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy tracking-tight leading-tight mb-6">
+                    RESTART CORPORAL: <br class="hidden sm:block"/>
+                    <span class="gradient-text">Destrave seu metabolismo</span> e conquiste sua melhor versão.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed font-normal">
+                    Saúde integral, alta performance e protocolos sob medida desenvolvidos para quem busca emagrecimento consciente, segurança e procedência comprovada.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#produtos" class="w-full sm:w-auto bg-brand-navy hover:bg-brand-navyLight text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-base flex items-center justify-center gap-3">
+                        <span>Ver Tabela de Produtos</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá Dr. Eduardo Marques, quero iniciar meu protocolo do Restart Corporal!');" 
+                       class="w-full sm:w-auto bg-brand-green hover:bg-brand-greenHover text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-base flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Iniciar Atendimento</span>
+                    </a>
+                </div>
+
+                <!-- BADGES RÁPIDAS -->
+                <div class="mt-12 pt-8 border-t border-slate-200/80 grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-600 text-xs sm:text-sm font-medium">
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-green"></i> Alta Qualidade
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-green"></i> Origem Garantida
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-green"></i> Entrega Rápida
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-green"></i> Compra Segura
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRODUTOS E VALORES -->
+    <section id="produtos" class="py-20 bg-slate-100/70 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy tracking-tight mb-4">Tabela de Opções & Valores</h2>
+                <p class="text-slate-600">Selecione o item desejado e clique no botão para ser direcionado diretamente para a equipe de atendimento via WhatsApp.</p>
+            </div>
+
+            <!-- GRID DE CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- CARD 1: TG / TIRZEC (1 Ampola) -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div class="absolute -top-3 right-6 bg-slate-100 text-slate-700 font-semibold text-xs px-3 py-1 rounded-full border border-slate-200">
+                        Opção Individual
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-vial"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">TG / Tirzec (1 Ampola)</h3>
+                        <p class="text-slate-500 text-sm mb-6">Tirzepatida concentrada em dose individual para início de protocolo metabólico.</p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+                            <span class="text-xs text-slate-400 font-medium block uppercase tracking-wider">Valor unitário</span>
+                            <span class="text-3xl font-extrabold text-brand-navy">R$ 350,<span class="text-lg">00</span></span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá! Tenho interesse na opção: TG / Tirzec (1 Ampola) - R$ 350,00.');" 
+                       class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pedir no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- CARD 2: TG / TIRZEC (Caixa com 4 Ampolas) -->
+                <div class="bg-white rounded-2xl p-6 border-2 border-brand-green shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative group scale-102">
+                    <div class="absolute -top-3.5 right-6 bg-brand-green text-white font-semibold text-xs px-3.5 py-1 rounded-full shadow-sm">
+                        Melhor Custo-Benefício
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">TG / Tirzec (Caixa c/ 4 Ampolas)</h3>
+                        <p class="text-slate-500 text-sm mb-6">Kit completo contendo 4 ampolas para continuidade e consistência no processo.</p>
+                        <div class="bg-emerald-50/60 p-4 rounded-xl border border-emerald-100 mb-6">
+                            <span class="text-xs text-brand-green font-semibold block uppercase tracking-wider">Valor À Vista</span>
+                            <span class="text-3xl font-extrabold text-brand-navy">R$ 900,<span class="text-lg">00</span></span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá! Gostaria de aproveitar a oferta: TG / Tirzec (Caixa com 4 Ampolas) - R$ 900,00 À Vista.');" 
+                       class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Garantir com Desconto</span>
+                    </a>
+                </div>
+
+                <!-- CARD 3: RETATRUTIDE CANETA -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div class="absolute -top-3 right-6 bg-slate-100 text-slate-700 font-semibold text-xs px-3 py-1 rounded-full border border-slate-200">
+                        Tecnologia Avançada
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-pen-fancy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">Retatrutide Caneta</h3>
+                        <p class="text-slate-500 text-sm mb-6">Aplicação com caneta aplicadora para máxima praticidade e precisão no dia a dia.</p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+                            <span class="text-xs text-slate-400 font-medium block uppercase tracking-wider">Valor do Item</span>
+                            <span class="text-3xl font-extrabold text-brand-navy">R$ 1.000,<span class="text-lg">00</span></span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá! Tenho interesse no item: Retatrutide Caneta - R$ 1.000,00.');" 
+                       class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pedir no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- CARD 4: DURATESTON PLUS GOLD -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">Durateston Plus Gold</h3>
+                        <p class="text-slate-500 text-sm mb-6">Fórmula voltada para suporte de disposição física e otimização de performance.</p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+                            <span class="text-xs text-slate-400 font-medium block uppercase tracking-wider">Valor do Item</span>
+                            <span class="text-3xl font-extrabold text-brand-navy">R$ 250,<span class="text-lg">00</span></span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá! Gostaria de consultar a opção: Durateston Plus Gold - R$ 250,00.');" 
+                       class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pedir no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- CARD 5: TESTOSTERONA DEPOT -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-flask-vial"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">Testosterona Depot</h3>
+                        <p class="text-slate-500 text-sm mb-6">Opção direcionada ao equilíbrio hormonal e manutenção do rendimento energético.</p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+                            <span class="text-xs text-slate-400 font-medium block uppercase tracking-wider">Valor do Item</span>
+                            <span class="text-3xl font-extrabold text-brand-navy">R$ 250,<span class="text-lg">00</span></span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá! Tenho interesse no item: Testosterona Depot - R$ 250,00.');" 
+                       class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pedir no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- CARD 6: TIRZEPATIDA TG VIALS -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-notes-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-2">Tirzepatida TG Vials</h3>
+                        <p class="text-slate-500 text-sm mb-6">Apresentação em frascos ampolas (vials) para dosagem fracionada sob medida.</p>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-6">
+                            <span class="text-xs text-slate-400 font-medium block uppercase tracking-wider">Sob Consulta</span>
+                            <span class="text-2xl font-extrabold text-brand-navy">Consulte Opções</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" onclick="this.href=getWaLink('Olá! Gostaria de saber mais informações e valores para: Tirzepatida TG Vials.');" 
+                       class="w-full bg-brand-navy hover:bg-brand-navyLight text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Consultar Disponibilidade</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <section id="diferenciais" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy tracking-tight mb-4">Por que escolher o Restart Corporal?</h2>
+                <p class="text-slate-600">Alinhamos responsabilidade, suporte dedicado e logística ágil para garantir a melhor experiência.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- item 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-2">Procedência Comprovada</h4>
+                    <p class="text-slate-500 text-sm">Garantia total de origem dos itens com rigorosos padrões de integridade.</p>
+                </div>
+
+                <!-- item 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-2">Alta Qualidade</h4>
+                    <p class="text-slate-500 text-sm">Seleção criteriosa de compostos e soluções para otimização metabólica.</p>
+                </div>
+
+                <!-- item 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-2">Compra Segura</h4>
+                    <p class="text-slate-500 text-sm">Atendimento transparente e suporte completo do primeiro contato à entrega.</p>
+                </div>
+
+                <!-- item 4 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition-transform">
+                    <div class="w-14 h-14 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-2">Entrega Rápida</h4>
+                    <p class="text-slate-500 text-sm">Logística ágil e embalagens com acondicionamento adequado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE O MÉDICO -->
+    <section id="sobre" class="py-20 bg-gradient-to-r from-brand-navy to-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- ILUSTRAÇÃO CONCEITUAL / ÍCONE MÉDICO -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-brand-green to-teal-400 p-1 shadow-2xl">
+                            <div class="w-full h-full bg-brand-navy rounded-full flex flex-col items-center justify-center text-center p-6 border-4 border-slate-800">
+                                <i class="fa-user-md text-6xl text-brand-green mb-4"></i>
+                                <h3 class="text-xl font-bold">Dr. Eduardo Marques</h3>
+                                <p class="text-xs text-slate-300 font-mono mt-1">CRM 68489-SP</p>
+                                <span class="mt-4 px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs border border-emerald-500/30">Medicina Integrada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEXTO INFORMATIVO -->
+                <div class="lg:col-span-7">
+                    <span class="text-brand-green font-semibold text-xs tracking-widest uppercase block mb-3">Compromisso & Ciência</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Dr. Eduardo Marques <span class="text-slate-400 font-normal text-2xl block sm:inline">CRM 68489-SP</span></h2>
+                    
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        O conceito do <strong>Restart Corporal</strong> nasceu da necessidade de oferecer uma visão moderna e sem extremismos sobre o emagrecimento e o reequilíbrio metabólico. 
+                    </p>
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Nosso foco principal é proporcionar desinflamação, controle de apetite, melhora da disposição e otimização hormonal, sempre priorizando a qualidade, a procedência e o acompanhamento humanizado em todas as etapas.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" target="_blank" onclick="this.href=getWaLink('Olá Dr. Eduardo Marques, gostaria de tirar algumas dúvidas sobre os métodos de Restart Corporal.');" 
+                           class="bg-brand-green hover:bg-brand-greenHover text-white font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Falar com o Dr. Eduardo</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / RODAPÉ -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-lg font-bold text-white tracking-tight">RESTART CORPORAL</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Proporcionando saúde integral, otimização metabólica e emagrecimento consciente com qualidade garantida.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegação Rápida</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#produtos" class="hover:text-brand-green transition-colors">Produtos e Valores</a></li>
+                        <li><a href="#diferenciais" class="hover:text-brand-green transition-colors">Diferenciais</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-green transition-colors">Dr. Eduardo Marques</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Responsabilidade Profissional</h4>
+                    <p class="text-xs text-slate-400">
+                        Dr. Eduardo Marques<br/>
+                        Médico Inscrito sob o CRM 68489-SP<br/>
+                        São Paulo - SP
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 text-center text-xs text-slate-400">
+                <p class="mb-2">&copy; <script>document.write(new Date().getFullYear())</script> Restart Corporal. Todos os direitos reservados.</p>
+                <p class="text-[11px] max-w-3xl mx-auto leading-relaxed">
+                    Aviso: As informações presentes nesta landing page possuem caráter informativo e educacional. Quaisquer tratamentos ou protocolos dependem de análise e avaliação individual de saúde.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
