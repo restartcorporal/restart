@@ -1,315 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restart Corporal | Dr. Eduardo Marques</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            navy: '#0f2b48',
-                            navyLight: '#1e3a8a',
-                            green: '#2da95c',
-                            greenHover: '#238647',
-                            lightBg: '#f8fafc'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17436c">
+  <meta name="description" content="Restart Corporal — saúde, bem-estar e acompanhamento profissional.">
+  <title>Restart Corporal | Dr. Eduardo Monteiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="./assets/js/config.js"></script>
+  <script defer src="./assets/js/app.js"></script>
 </head>
-<body class="bg-brand-lightBg text-slate-800 antialiased flex flex-col min-h-screen">
-
-    <!-- Faixa Superior de Credencial Médica -->
-    <div class="bg-brand-navy text-white text-xs md:text-sm py-2.5 text-center px-4 font-medium flex items-center justify-center space-x-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Atendimento Médico Especializado | <strong>Dr. Eduardo Marques</strong> — CRM 68489-SP</span>
-    </div>
-
-    <!-- Cabeçalho com Logo Vetorial Restart Corporal -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-brand-green/10 border border-brand-green/30 flex items-center justify-center text-brand-green text-xl font-bold">
-                    <svg class="w-6 h-6 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-                        <path d="M12 8v4l3 3"/>
-                    </svg>
-                </div>
-                <div>
-                    <h1 class="font-extrabold text-xl text-brand-navy tracking-tight leading-none">RESTART</h1>
-                    <span class="text-[10px] font-bold text-brand-green tracking-[0.25em] block uppercase">Corporal</span>
-                </div>
-            </div>
-
-            <!-- Botão WhatsApp Topo -->
-            <button onclick="sendWhatsapp('Atendimento Geral')" class="hidden md:inline-flex items-center space-x-2 bg-brand-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-brand-greenHover transition shadow-sm">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Atendimento WhatsApp</span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Hero Section / Apresentação da Persona -->
-    <section class="bg-gradient-to-b from-white via-slate-50 to-brand-lightBg py-12 md:py-16 px-4 border-b border-slate-200">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
-            <!-- Persona Médica (Design Sem Rosto / Autoridade Corporativa) -->
-            <div class="md:col-span-4 flex flex-col items-center text-center">
-                <div class="relative w-44 h-44 rounded-full bg-slate-900 border-4 border-brand-green shadow-xl flex items-center justify-center text-white overflow-hidden mb-4">
-                    <!-- Ícone médico de alta autoridade -->
-                    <i class="fa-solid fa-user-doctor text-6xl text-slate-300"></i>
-                    <div class="absolute bottom-0 w-full bg-brand-navy/90 py-1 text-[11px] font-bold tracking-wider text-emerald-400">
-                        MEDICINA INTEGRAL
-                    </div>
-                </div>
-                <h3 class="text-lg font-extrabold text-brand-navy">Dr. Eduardo Marques</h3>
-                <p class="text-xs font-semibold text-brand-green bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full mt-1">
-                    CRM 68489-SP
-                </p>
-            </div>
-
-            <!-- Texto da Promessa -->
-            <div class="md:col-span-8 text-center md:text-left space-y-4">
-                <span class="inline-block bg-emerald-100 text-emerald-800 font-bold text-xs uppercase px-3 py-1 rounded-full tracking-wider border border-emerald-200">
-                    Método Restart Corporal
-                </span>
-                <h2 class="text-3xl md:text-4xl font-black text-brand-navy leading-tight tracking-tight">
-                    Destrave seu metabolismo e conquiste sua melhor versão
-                </h2>
-                <p class="text-slate-600 text-base leading-relaxed">
-                    Tratamentos modernos para emagrecimento consciente, otimização hormonal e saúde integral. Produtos de procedência garantida e acompanhamento de alta eficácia.
-                </p>
-                
-                <!-- Selos de Segurança -->
-                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3 text-xs text-slate-700 font-bold">
-                    <div class="flex items-center bg-white px-3 py-2 rounded-lg border border-slate-200 shadow-sm">
-                        <i class="fa-solid fa-circle-check text-brand-green text-base mr-2"></i> Produtos Originais
-                    </div>
-                    <div class="flex items-center bg-white px-3 py-2 rounded-lg border border-slate-200 shadow-sm">
-                        <i class="fa-solid fa-shield-halved text-brand-green text-base mr-2"></i> Compra Segura
-                    </div>
-                    <div class="flex items-center bg-white px-3 py-2 rounded-lg border border-slate-200 shadow-sm">
-                        <i class="fa-solid fa-truck-fast text-brand-green text-base mr-2"></i> Entrega Rápida
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<body>
+  <div class="topline">RESTART CORPORAL <span>•</span> Saúde, bem-estar e cuidado individualizado</div>
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="Restart Corporal - início">
+      <span class="brand-mark">↻</span>
+      <span><b>RESTART</b><small>CORPORAL</small></span>
+    </a>
+    <form id="search-form" class="search" role="search">
+      <input id="search-input" type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos">
+      <button aria-label="Buscar">⌕</button>
+    </form>
+    <nav class="header-actions">
+      <a href="#/atendimento" class="header-link">Atendimento</a>
+      <a id="header-whatsapp" class="button button-green" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <button id="mobile-menu" class="mobile-menu" aria-label="Abrir menu">☰</button>
+    </nav>
+  </header>
+  <nav id="category-nav" class="category-nav" aria-label="Categorias">
+    <a href="#/">Início</a><span class="muted">Carregando categorias…</span>
+  </nav>
+  <main id="app">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">CUIDADO E BEM-ESTAR</span>
+        <h1>Um novo começo para sua saúde.</h1>
+        <p>Conheça a Restart Corporal: informação, atendimento individualizado e produtos selecionados com responsabilidade.</p>
+        <a class="button button-green" href="#produtos">Explorar catálogo</a>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-placeholder"><span>RESTART<br>CORPORAL</span><small>Adicione sua fotografia profissional em assets/eduardo-monteiro.jpg</small></div>
+      </div>
     </section>
-
-    <!-- Seção de Produtos com Imagens Integradas -->
-    <section id="produtos" class="py-12 md:py-16 px-4 max-w-6xl mx-auto flex-grow w-full">
-        <div class="text-center mb-10">
-            <h3 class="text-2xl md:text-3xl font-black text-brand-navy uppercase tracking-tight">Catálogo & Tabela de Valores</h3>
-            <p class="text-slate-500 text-sm mt-1">Selecione o item desejado para ser direcionado ao WhatsApp</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- Card 1: TG / Tirzec Ampola Avulsa -->
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                <div>
-                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                        <!-- Foto do frasco/ampola -->
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="TG Tirzepatida Ampola" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-brand-navy text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow-sm">
-                            Ampola Avulsa
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-xl font-extrabold text-brand-navy">TG / Tirzec (1 Ampola)</h4>
-                        <p class="text-slate-500 text-xs mt-1">Tirzepatida 15mg em frasco ampola individual.</p>
-                    </div>
-                </div>
-                <div class="px-5 pb-5">
-                    <div class="my-3 border-t border-b border-slate-100 py-2.5 flex justify-between items-baseline">
-                        <span class="text-xs text-slate-400 font-medium">Valor por unidade:</span>
-                        <span class="text-3xl font-black text-brand-navy">R$ 350<span class="text-base font-normal">,00</span></span>
-                    </div>
-                    <button onclick="sendWhatsapp('TG / Tirzec - 1 Ampola (R$ 350,00)')" class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Pedir no WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 2: Caixa com 4 Ampolas (Destaque) -->
-            <div class="bg-white border-2 border-brand-green rounded-2xl overflow-hidden shadow-md relative flex flex-col justify-between">
-                <div class="absolute top-3 right-3 bg-brand-green text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-10">
-                    Mais Recomendado
-                </div>
-                <div>
-                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                        <!-- Foto da caixa do produto -->
-                        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80" alt="Caixa com 4 Ampolas Tirzepatida" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow-sm">
-                            Kit Tratamento
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-xl font-extrabold text-brand-navy">Caixa com 4 Ampolas</h4>
-                        <p class="text-slate-500 text-xs mt-1">Caixa fechada TG / Tirzec para protocolo completo.</p>
-                    </div>
-                </div>
-                <div class="px-5 pb-5">
-                    <div class="my-3 border-t border-b border-slate-100 py-2.5 flex justify-between items-baseline">
-                        <span class="text-xs text-slate-400 font-medium">À vista com desconto:</span>
-                        <span class="text-3xl font-black text-brand-green">R$ 900<span class="text-base font-normal">,00</span></span>
-                    </div>
-                    <button onclick="sendWhatsapp('Caixa com 4 Ampolas (R$ 900,00)')" class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Pedir no WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 3: Retatrutide Caneta -->
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                <div>
-                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                        <!-- Foto de caneta aplicadora de emagrecimento -->
-                        <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=600&q=80" alt="Caneta Retatrutide" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-purple-700 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow-sm">
-                            Caneta Injetável
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-xl font-extrabold text-brand-navy">Retatrutide (Caneta)</h4>
-                        <p class="text-slate-500 text-xs mt-1">Triplo agonista hormonal em formato de caneta de precisão.</p>
-                    </div>
-                </div>
-                <div class="px-5 pb-5">
-                    <div class="my-3 border-t border-b border-slate-100 py-2.5 flex justify-between items-baseline">
-                        <span class="text-xs text-slate-400 font-medium">Valor por unidade:</span>
-                        <span class="text-3xl font-black text-brand-navy">R$ 1.000<span class="text-base font-normal">,00</span></span>
-                    </div>
-                    <button onclick="sendWhatsapp('Retatrutide Caneta (R$ 1.000,00)')" class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Pedir no WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 4: Durateston Plus Gold -->
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                <div>
-                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                        <!-- Foto do produto hormonal / frasco -->
-                        <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=600&q=80" alt="Durateston Plus Gold" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow-sm">
-                            Suporte Hormonal
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-xl font-extrabold text-brand-navy">Durateston Plus Gold</h4>
-                        <p class="text-slate-500 text-xs mt-1">Fórmula concentrada de pureza certificada.</p>
-                    </div>
-                </div>
-                <div class="px-5 pb-5">
-                    <div class="my-3 border-t border-b border-slate-100 py-2.5 flex justify-between items-baseline">
-                        <span class="text-xs text-slate-400 font-medium">Valor por frasco:</span>
-                        <span class="text-3xl font-black text-brand-navy">R$ 250<span class="text-base font-normal">,00</span></span>
-                    </div>
-                    <button onclick="sendWhatsapp('Durateston Plus Gold (R$ 250,00)')" class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Pedir no WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 5: Testosterona Depot -->
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                <div>
-                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
-                        <!-- Foto do frasco depot -->
-                        <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=600&q=80" alt="Testosterona Depot" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow-sm">
-                            Suporte Hormonal
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h4 class="text-xl font-extrabold text-brand-navy">Testosterona Depot</h4>
-                        <p class="text-slate-500 text-xs mt-1">Linha de alta absorção e procedência garantida.</p>
-                    </div>
-                </div>
-                <div class="px-5 pb-5">
-                    <div class="my-3 border-t border-b border-slate-100 py-2.5 flex justify-between items-baseline">
-                        <span class="text-xs text-slate-400 font-medium">Valor por unidade:</span>
-                        <span class="text-3xl font-black text-brand-navy">R$ 250<span class="text-base font-normal">,00</span></span>
-                    </div>
-                    <button onclick="sendWhatsapp('Testosterona Depot (R$ 250,00)')" class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-bold py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Pedir no WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 6: Chamada de Consulta / Suporte Médico -->
-            <div class="bg-brand-navy text-white border border-slate-800 rounded-2xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 font-bold text-xs uppercase px-2.5 py-1 rounded-md">Atendimento VIP</span>
-                        <i class="fa-solid fa-stethoscope text-emerald-400 text-2xl"></i>
-                    </div>
-                    <h4 class="text-xl font-extrabold">Dúvidas sobre os Tratamentos?</h4>
-                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">
-                        Fale diretamente com o suporte médico para saber qual protocolo se adapta melhor aos seus objetivos de saúde e emagrecimento.
-                    </p>
-                </div>
-                <div class="mt-6">
-                    <div class="my-4 border-t border-b border-slate-700 py-3">
-                        <span class="text-xs text-slate-400 block">Responsável Técnico</span>
-                        <span class="text-sm font-bold text-white">Dr. Eduardo Marques</span>
-                        <span class="text-xs font-semibold text-emerald-400 block">CRM 68489-SP</span>
-                    </div>
-                    <button onclick="sendWhatsapp('Consulta / Informações Gerais')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black py-3 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-lg">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Falar com o Doutor</span>
-                    </button>
-                </div>
-            </div>
-
-        </div>
+    <section class="trust-strip">
+      <div><b>Atendimento individualizado</b><small>Orientação conforme cada necessidade</small></div>
+      <div><b>Informação transparente</b><small>Descrição e disponibilidade claras</small></div>
+      <div><b>Contato direto</b><small>Atendimento pelo WhatsApp</small></div>
     </section>
-
-    <!-- Rodapé Legal -->
-    <footer class="bg-white border-t border-slate-200 py-8 px-4 mt-auto">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
-            <div>
-                <p class="font-bold text-brand-navy text-base">RESTART CORPORAL</p>
-                <p class="text-xs text-slate-500 mt-0.5">Dr. Eduardo Marques — CRM 68489-SP</p>
-            </div>
-            <p class="text-xs text-slate-400">
-                &copy; 2026 Restart Corporal. Todos os direitos reservados.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Script de Redirecionamento Direto para o WhatsApp -->
-    <script>
-        // INSIRA O SEU NÚMERO DO WHATSAPP AQUI (Com código 55 e DDD)
-        const whatsappNumber = "5511999999999"; 
-
-        function sendWhatsapp(item) {
-            const message = `Olá Dr. Eduardo! Tenho interesse no item *${item}* do Restart Corporal e gostaria de concluir o meu pedido.`;
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-        }
-    </script>
+    <section id="produtos" class="section">
+      <div class="section-heading"><div><span class="eyebrow">NOSSO CATÁLOGO</span><h2>Produtos em destaque</h2><p>Consulte informações e disponibilidade com nossa equipe.</p></div><a href="#/catalogo" class="text-link">Ver catálogo completo →</a></div>
+      <div id="featured-products" class="product-grid"><div class="loading">Carregando catálogo…</div></div>
+    </section>
+    <section class="wide-promo">
+      <div><span class="eyebrow">RESTART CORPORAL</span><h2>Informação e cuidado em cada etapa.</h2><p>Entre em contato para conhecer os serviços e esclarecer suas dúvidas.</p></div>
+      <a id="promo-whatsapp" class="button button-light" href="#" target="_blank" rel="noopener">Falar com a equipe</a>
+    </section>
+    <section class="section about">
+      <div><span class="eyebrow">SOBRE A RESTART</span><h2>Conheça nossa proposta</h2></div>
+      <p>A Restart Corporal reúne conteúdo, atendimento e produtos selecionados. As informações deste site são gerais e não substituem avaliação profissional, diagnóstico ou prescrição individual.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-brand"><span class="brand-mark">↻</span><div><b>RESTART CORPORAL</b><small>Dr. Eduardo Monteiro</small></div></div>
+    <div><b>Atendimento</b><a id="footer-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="#/atendimento">Fale conosco</a></div>
+    <div><b>Institucional</b><a href="#/privacidade">Privacidade</a><a href="#/termos">Termos de uso</a></div>
+    <p class="copyright">© <span id="year"></span> Restart Corporal. Todos os direitos reservados. Informações sujeitas à legislação aplicável.</p>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript>Ative o JavaScript para utilizar a loja.</noscript>
 </body>
 </html>
