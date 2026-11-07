@@ -1,77 +1,33 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17436c">
-  <meta name="description" content="Restart Corporal — saúde, bem-estar e acompanhamento profissional.">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17436c"><meta name="description" content="Restart Corporal — saúde, bem-estar e acompanhamento profissional.">
   <title>Restart Corporal | Dr. Eduardo Monteiro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script defer src="./assets/js/config.js"></script>
   <script defer src="./assets/js/app.js"></script>
   <script defer src="./assets/js/visual-customizer.js"></script>
+  <script defer src="./assets/js/admin-v2.js"></script>
 </head>
 <body>
   <div class="topline">RESTART CORPORAL <span>•</span> Saúde, bem-estar e cuidado individualizado</div>
   <header class="site-header">
-    <a class="brand" href="#/" aria-label="Restart Corporal - início">
-      <span class="brand-mark">↻</span>
-      <span><b>RESTART</b><small>CORPORAL</small></span>
-    </a>
-    <form id="search-form" class="search" role="search">
-      <input id="search-input" type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos">
-      <button aria-label="Buscar">⌕</button>
-    </form>
-    <nav class="header-actions">
-      <a href="#/atendimento" class="header-link">Atendimento</a>
-      <a id="header-whatsapp" class="button button-green" href="#" target="_blank" rel="noopener">WhatsApp</a>
-      <button id="mobile-menu" class="mobile-menu" aria-label="Abrir menu">☰</button>
-    </nav>
+    <a class="brand" href="#/" aria-label="Restart Corporal - início"><span class="brand-mark">↻</span><span><b>RESTART</b><small>CORPORAL</small></span></a>
+    <form id="search-form" class="search" role="search"><input id="search-input" type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos"><button aria-label="Buscar">⌕</button></form>
+    <nav class="header-actions"><a href="#/atendimento" class="header-link">Atendimento</a><a id="header-whatsapp" class="button button-green" href="#" target="_blank" rel="noopener">WhatsApp</a><button id="mobile-menu" class="mobile-menu" aria-label="Abrir menu">☰</button></nav>
   </header>
-  <nav id="category-nav" class="category-nav" aria-label="Categorias">
-    <a href="#/">Início</a><span class="muted">Carregando categorias…</span>
-  </nav>
+  <nav id="category-nav" class="category-nav" aria-label="Categorias"><a href="#/">Início</a><span class="muted">Carregando categorias…</span></nav>
   <main id="app">
-    <section class="hero">
-      <div class="hero-copy">
-        <span class="eyebrow">CUIDADO E BEM-ESTAR</span>
-        <h1>Um novo começo para sua saúde.</h1>
-        <p>Conheça a Restart Corporal: informação, atendimento individualizado e produtos selecionados com responsabilidade.</p>
-        <a class="button button-green" href="#produtos">Explorar catálogo</a>
-      </div>
-      <div class="hero-photo">
-        <div class="photo-placeholder"><span>RESTART<br>CORPORAL</span><small>Adicione sua fotografia profissional em assets/eduardo-monteiro.jpg</small></div>
-      </div>
-    </section>
-    <section class="trust-strip">
-      <div><b>Atendimento individualizado</b><small>Orientação conforme cada necessidade</small></div>
-      <div><b>Informação transparente</b><small>Descrição e disponibilidade claras</small></div>
-      <div><b>Contato direto</b><small>Atendimento pelo WhatsApp</small></div>
-    </section>
-    <section id="produtos" class="section">
-      <div class="section-heading"><div><span class="eyebrow">NOSSO CATÁLOGO</span><h2>Produtos em destaque</h2><p>Consulte informações e disponibilidade com nossa equipe.</p></div><a href="#/catalogo" class="text-link">Ver catálogo completo →</a></div>
-      <div id="featured-products" class="product-grid"><div class="loading">Carregando catálogo…</div></div>
-    </section>
-    <section class="wide-promo">
-      <div><span class="eyebrow">RESTART CORPORAL</span><h2>Informação e cuidado em cada etapa.</h2><p>Entre em contato para conhecer os serviços e esclarecer suas dúvidas.</p></div>
-      <a id="promo-whatsapp" class="button button-light" href="#" target="_blank" rel="noopener">Falar com a equipe</a>
-    </section>
-    <section class="section about">
-      <div><span class="eyebrow">SOBRE A RESTART</span><h2>Conheça nossa proposta</h2></div>
-      <p>A Restart Corporal reúne conteúdo, atendimento e produtos selecionados. As informações deste site são gerais e não substituem avaliação profissional, diagnóstico ou prescrição individual.</p>
-    </section>
+    <section class="hero"><div class="hero-copy"><span class="eyebrow">CUIDADO E BEM-ESTAR</span><h1>Um novo começo para sua saúde.</h1><p>Conheça a Restart Corporal: informação, atendimento individualizado e produtos selecionados com responsabilidade.</p><a class="button button-green" href="#produtos">Explorar catálogo</a></div><div class="hero-photo"><div class="photo-placeholder"><span>RESTART<br>CORPORAL</span><small>Adicione sua fotografia profissional em assets/eduardo-monteiro.jpg</small></div></div></section>
+    <section class="trust-strip"><div><b>Atendimento individualizado</b><small>Orientação conforme cada necessidade</small></div><div><b>Informação transparente</b><small>Descrição e disponibilidade claras</small></div><div><b>Contato direto</b><small>Atendimento pelo WhatsApp</small></div></section>
+    <section id="produtos" class="section"><div class="section-heading"><div><span class="eyebrow">NOSSO CATÁLOGO</span><h2>Produtos em destaque</h2><p>Consulte informações e disponibilidade com nossa equipe.</p></div><a href="#/catalogo" class="text-link">Ver catálogo completo →</a></div><div id="featured-products" class="product-grid"><div class="loading">Carregando catálogo…</div></div></section>
+    <section class="wide-promo"><div><span class="eyebrow">RESTART CORPORAL</span><h2>Informação e cuidado em cada etapa.</h2><p>Entre em contato para conhecer os serviços e esclarecer suas dúvidas.</p></div><a id="promo-whatsapp" class="button button-light" href="#" target="_blank" rel="noopener">Falar com a equipe</a></section>
+    <section class="section about"><div><span class="eyebrow">SOBRE A RESTART</span><h2>Conheça nossa proposta</h2></div><p>A Restart Corporal reúne conteúdo, atendimento e produtos selecionados. As informações deste site são gerais e não substituem avaliação profissional, diagnóstico ou prescrição individual.</p></section>
   </main>
-  <footer class="footer">
-    <div class="footer-brand"><span class="brand-mark">↻</span><div><b>RESTART CORPORAL</b><small>Dr. Eduardo Monteiro</small></div></div>
-    <div><b>Atendimento</b><a id="footer-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="#/atendimento">Fale conosco</a></div>
-    <div><b>Institucional</b><a href="#/privacidade">Privacidade</a><a href="#/termos">Termos de uso</a></div>
-    <p class="copyright">© <span id="year"></span> Restart Corporal. Todos os direitos reservados. Informações sujeitas à legislação aplicável.</p>
-  </footer>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <noscript>Ative o JavaScript para utilizar a loja.</noscript>
-</body>
-</html>
+  <footer class="footer"><div class="footer-brand"><span class="brand-mark">↻</span><div><b>RESTART CORPORAL</b><small>Dr. Eduardo Monteiro</small></div></div><div><b>Atendimento</b><a id="footer-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="#/atendimento">Fale conosco</a></div><div><b>Institucional</b><a href="#/privacidade">Privacidade</a><a href="#/termos">Termos de uso</a></div><p class="copyright">© <span id="year"></span> Restart Corporal. Todos os direitos reservados. Informações sujeitas à legislação aplicável.</p></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div><noscript>Ative o JavaScript para utilizar a loja.</noscript>
+</body></html>

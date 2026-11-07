@@ -1,0 +1,23 @@
+RESTART CORPORAL — ADMIN 2.0
+
+PACOTE DE ATUALIZAÇÃO
+- index.html: carrega o novo módulo sem remover app.js nem visual-customizer.js.
+- assets/js/admin-v2.js: painel de visão geral, pedidos, estoque, clientes, cupons, relatórios CSV, equipe, auditoria e entregas.
+- supabase/admin-v2.sql: tabelas, colunas, RLS e auditoria.
+
+INSTALAÇÃO
+1. Envie os arquivos deste pacote para a raiz do repositório restartcorporal/restart, preservando as pastas e substituindo index.html.
+2. No Supabase > SQL Editor, faça backup e execute supabase/admin-v2.sql.
+3. Aguarde GitHub Pages publicar e abra https://restartcorporal.github.io/restart/#/admin.
+4. Entre com seu usuário administrador. Os módulos novos aparecem no menu lateral.
+
+IMPORTANTE
+- O pacote preserva os arquivos app.js, visual-customizer.js, config.js e style.css já existentes; não os substitui.
+- Para registrar funcionário, crie primeiro o usuário em Supabase Authentication > Users. Depois informe o UUID no módulo Funcionários.
+- O painel registra pedidos manualmente; não implementa checkout, gateway de pagamento nem baixa automática de estoque.
+- O cupom é cadastrado e listado, mas sua validação/aplicação no checkout requer integração específica.
+- Relatórios são exportados em CSV compatível com Excel.
+- O módulo de estoque atualiza a quantidade e grava movimentos. A baixa automática por venda deve ser ligada ao fluxo de pedidos antes de usar em produção.
+- Permissões do MVP: gerente, pedidos, estoque e leitura. O SQL permite CRUD básico da equipe ativa em tabelas operacionais; refinamento por função (cada módulo/tabela) deve ser concluído antes de conceder acesso a funcionários não confiáveis.
+- Não armazene dados de saúde, prontuários, receitas ou dados sensíveis de pacientes neste módulo de clientes.
+- Faça backup do Supabase antes de executar SQL em produção.
