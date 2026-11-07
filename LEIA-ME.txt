@@ -1,0 +1,29 @@
+PATCH DE PERSONALIZAÇÃO — RESTART CORPORAL
+
+O ZIP contém:
+- index.html atualizado para carregar o novo módulo;
+- assets/js/visual-customizer.js: tela de personalização, upload de imagens e cores;
+- supabase/visual-settings-policy.sql: política de leitura pública das configurações.
+
+INSTALAÇÃO
+1. Envie o conteúdo deste ZIP para a raiz do repositório GitHub restartcorporal/restart, mantendo as pastas.
+2. Confirme a substituição do index.html.
+3. No Supabase, abra SQL Editor, cole o conteúdo de supabase/visual-settings-policy.sql e execute.
+4. Aguarde o GitHub Pages atualizar e abra https://restartcorporal.github.io/restart/#/admin
+5. Entre no painel e clique em Configurações.
+6. Faça as alterações e clique em Salvar personalização.
+
+IMAGENS
+Os uploads usam o bucket público existente product-images. Não altere nem publique chaves secretas.
+A imagem enviada é carregada no armazenamento e sua URL é gravada nas configurações.
+
+CORES
+O botão Restaurar cores originais apenas restaura a prévia do formulário. Para gravar a paleta original, clique em Salvar personalização.
+
+Se o site estiver aberto no celular, atualize a página depois que o GitHub Pages concluir a publicação.
+
+MOEDA DA LOJA
+Na aba Configurações, escolha a moeda no campo "Moeda da loja".
+Opções incluídas: USD, PYG, BRL, ARS, EUR, UYU, CLP e BOB.
+A escolha altera apenas a forma de exibição dos preços. Ela NÃO converte os valores numéricos já cadastrados nos produtos.
+Depois de salvar, atualize a página da loja para ver os preços na nova moeda.
