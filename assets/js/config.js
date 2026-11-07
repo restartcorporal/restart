@@ -4,9 +4,10 @@
  * Nunca coloque service_role, secret key ou senha neste arquivo.
  */
 window.RESTART_CONFIG = {
-  SUPABASE_URL: "COLE_AQUI_A_URL_DO_PROJETO",
-  SUPABASE_ANON_KEY: "COLE_AQUI_A_CHAVE_PUBLICA_ANON",
+  SUPABASE_URL: "https://txuhrpmzgdfqqbipjlht.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_-Ipazhzbvu8E8L6su78-Ng_ZxRRSrKa",
   WHATSAPP_DEFAULT: "595XXXXXXXXX",
   CURRENCY: "USD",
   LOCALE: "es-PY"
+};
 };
