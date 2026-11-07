@@ -113,4 +113,18 @@ const css=document.createElement("style");css.textContent=`
 .v2-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.v2-stats article,.v2-panel{background:#fff;border:1px solid #e7ebef;border-radius:9px;padding:18px;margin:14px 0}.v2-stats small,.v2-stats b{display:block}.v2-stats small{font-size:11px;color:#6c7781}.v2-stats b{font-size:25px;color:#17436c;margin-top:8px}.v2-panel h2{font-size:17px;color:#17436c;margin:0 0 14px}.v2-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.v2-grid h2,.v2-grid button,.v2-grid span{grid-column:1/-1}.v2-field{display:grid;gap:6px;font-size:12px;font-weight:600;color:#17436c}.v2-field input,.v2-field select{padding:10px;border:1px solid #dce3e8;border-radius:6px;min-width:0}.v2-error{color:#b23b3b}.v2-panel p{font-size:12px;color:#6c7781}
 @media(max-width:850px){.v2-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.v2-grid{grid-template-columns:1fr}.v2-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.v2-nav{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}}
 `;document.head.appendChild(css);
+
+// CORREÇÃO DO BOTÃO PRODUTOS
+document.addEventListener("click", function(e) {
+  const btn = e.target.closest('.admin-side [data-tab="products"]');
+
+  if (!btn || !location.hash.startsWith("#/admin")) return;
+
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+
+  location.hash = "#/admin?tab=products&refresh=" + Date.now();
+}, true);
+
 })();
